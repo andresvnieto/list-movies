@@ -1,0 +1,28 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  margin: 1rem 0;
+}
+
+small {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+}
