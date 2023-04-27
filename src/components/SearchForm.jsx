@@ -1,16 +1,22 @@
+import { useState } from "react";
+import { fetchMovies } from "../services/fetchAPI";
 
-function SearchForm() {
-    const handleSubmit = (e) => {
-        e.prevenDefault();
-        console.log('Envio del formulario');
+function SearchForm({ searchTerm, setSearchTerm }) {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const res = await fetchMovies(searchTerm);
+            console.log(res);
+        } catch (error) {
+            throw new Error(error, 'Error al realizar el fetch');
+        }
     };
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Superman, Avengers..." name="search" />
-                <button > Buscar </button>
+                <input type="text" placeholder="Superman, Avengers..." name="search" onChange={setSearchTerm()} />
+                <button> Buscar </button>
             </form>
-            <small> Acá va la cantidad de resulados para el término de búsqueda </small>
         </>
     )
 }

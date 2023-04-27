@@ -12,17 +12,31 @@ header h1 {
   text-align: center;
 }
 
-form {
-  display: flex;
-  margin: 1rem 0;
-}
-
 small {
   display: block;
   width: 100%;
   text-align: center;
 }
 
+/* Search  form */
+
+form {
+  display: flex;
+  margin: 1rem 0;
+}
+
 input {
   width: 100%;
+}
+
+/* Movies */
+.movies{
+  margin: 2rem 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
+}
+
+.movie h3, .movie h6{
+  margin: 0
 }
