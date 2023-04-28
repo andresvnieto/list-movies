@@ -1,3 +1,3 @@
 export const fetchMovies = (term) => {
-    return fetch(`${process.env.REACT_APP_URL}=${term}&apikey=${process.env.REACT_APP_API_KEY}`)
+    return fetch(`${import.meta.env.VITE_APP_URL}=${term}&apikey=${import.meta.env.VITE_API_KEY}`)
 }
